@@ -4,18 +4,17 @@
 struct Node
 {
     int data;
-    struct Node* next;
+    struct Node* next;// stores the addresss for next node 
+    struct Node* back;// stores the addresss for the previous node
 };
-
 void main()
 {
     struct Node *head, *mover, *temp;
     int n, f;
-   
 
     printf("Enter the number of nodes: ");
     scanf("%d", &n);
- mover=(struct Node*)calloc(n,sizeof(struct Node));
+
      printf("Enter the first data  ");
     scanf("%d", &(head->data));
     // Initialize head to Mover
