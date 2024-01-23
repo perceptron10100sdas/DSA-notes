@@ -1,18 +1,28 @@
-# Dsa notes
-# Allocation of memory to LL from array
-## The neccessary elements in single LL
-**Head**-stores the initial node
 
-**Mover**-stores the address for the next node 
+# Linked Lists in C: A Summary 
 
-**Temp**-assigned to a next node
+## Concept
 
-`
-head=NULL //header has null ptr at the beginning
-`
+Linear data structure where elements (nodes) are not stored contiguously in memory.
+Each node contains data and a pointer to the next node in the sequence.
+Dynamic resizing is possible, as elements can be added or removed without the need to shift other elements in memory.
+## Node Structure
 
+## Node Structure: For single linked list 
 
+```c
+struct Node {
+    int data;
+    struct Node* next;
+};
+``````
+## Basic Operations
 
-`
-mover->next=temp //
-`
+Traversal: Iterating through the list and accessing each node's data.
+Length: Counting the number of nodes in the list.
+
+Search: Checking if a specific value exists in the list.
+
+Insertion: Adding a new node at a specific position (e.g., beginning, end).
+
+Deletion: Removing a node from the list.
