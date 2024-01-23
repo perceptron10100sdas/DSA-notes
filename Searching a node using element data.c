@@ -39,17 +39,18 @@ void main()
         mover->next = temp;
         mover=temp;
     }
-    printf("enter the element number to be found ");
+    printf("enter the element value to be found ");
     scanf("%d",&e);
     
-    //Searching an element using the element number 
+    //Searching an element using the element data
     mover=head ;
   
 for(c=1;c<=n;c++)
 {
-    if(c==e)
+    if(mover->data==e)
     {
-        printf("%d",mover->data);
+        printf("the searched value is %d",mover->data);
+        printf("Its position is %d",c);
         break;
     }
     mover=mover->next;
