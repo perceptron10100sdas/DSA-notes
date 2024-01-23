@@ -39,7 +39,7 @@ void main()
 
     // Print the data of all nodes
     printf("Data of all nodes: ");
-    mover = head;
+   
     while (mover != NULL) {
         printf("%d ", mover->data);
         mover = mover->next;
