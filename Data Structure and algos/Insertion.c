@@ -22,8 +22,7 @@ void main()
     scanf("%d", &(head->data));
     head->next = NULL;
 
-    // Initialize mover
-    mover = head;
+   mover->next=head;
 
     for (f = 1; f < n; f++) {
         // Allocate memory for a new node
@@ -38,17 +37,16 @@ void main()
 
         // Update mover to point to the new node
         mover->next = temp;
-        mover = temp; // Advance mover to the newly added node
+      
     }
 
     // insert the element of the linked list
+    mover=(struct Node*)calloc((n+1),sizeof(struct Node));
     if(k==1)
     {
         printf("enter the element u want to insert");
         scanf("%d",&(temp->data));
         temp->next=head;
-
-       
 
     }
     else{

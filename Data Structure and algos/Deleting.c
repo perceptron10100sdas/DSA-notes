@@ -18,6 +18,7 @@ void main()
 
     // Initialize head
     head = (struct Node*)malloc(sizeof(struct Node));
+    mover=(struct Node*)calloc(n,sizeof(struct Node));
     printf("Enter the first data: ");
     scanf("%d", &(head->data));
     head->next = NULL;
@@ -28,6 +29,7 @@ void main()
     for (f = 1; f < n; f++) {
         // Allocate memory for a new node
         temp = (struct Node*)malloc(sizeof(struct Node));
+
 
         // Input data for the current node
         printf("Enter data for node %d: ", f + 1);
