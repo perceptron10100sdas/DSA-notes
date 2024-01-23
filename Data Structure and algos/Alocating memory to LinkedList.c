@@ -7,7 +7,7 @@ struct Node
     struct Node *next;
 };
 
-int main()
+void main()
 {
     struct Node *head, *mover, *temp;
     int n, f;
@@ -79,5 +79,5 @@ int main()
         free(temp);
     }
 
-    return 0;
+    
 }

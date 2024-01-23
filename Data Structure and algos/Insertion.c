@@ -7,7 +7,7 @@ struct Node
     struct Node *next;
 };
 
-int main()
+void main()
 {
     struct Node *head, *mover, *temp, *new;
     int n, f, k; // k is the element to be deleted
@@ -101,5 +101,5 @@ int main()
         free(mover);
     }
 
-    return 0;
+    
 }
