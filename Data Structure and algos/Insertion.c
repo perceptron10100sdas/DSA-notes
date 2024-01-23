@@ -37,11 +37,11 @@ void main()
 
         // Update mover to point to the new node
         mover->next = temp;
-      
+        mover=temp;
     }
 
     // insert the element of the linked list
-    mover=(struct Node*)calloc((n+1),sizeof(struct Node));
+    mover=(struct Node*)realloc((n+1),sizeof(struct Node));
     if(k==1)
     {
         printf("enter the element u want to insert");

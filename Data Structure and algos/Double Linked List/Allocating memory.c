@@ -11,6 +11,7 @@ void main()
 {
     struct Node *head, *mover, *temp;
     int n, f;
+     mover=(struct Node*)calloc(n,sizeof(struct Node));
 
     printf("Enter the number of nodes: ");
     scanf("%d", &n);
@@ -19,6 +20,8 @@ void main()
     scanf("%d", &(head->data));
     // Initialize head to Mover
     mover->next=head ;
+    mover->back=NULL;
+
    
 
     for (f = 1; f < n; f++) {
@@ -31,14 +34,17 @@ void main()
 
         // Set the next pointer of the new node
         temp->next =NULL;
+        temp->back=mover;
+
 
         // Update mover to point to the new node
         mover->next = temp;
+       mover=temp;
     }
 
     // Print the data of all nodes
     printf("Data of all nodes: ");
-    mover = head;
+    
     while (mover != NULL) {
         printf("%d ", mover->data);
         mover = mover->next;

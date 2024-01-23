@@ -35,6 +35,7 @@ void main()
 
         // Update mover to point to the new node
         mover->next = temp;
+        mover=temp;
     }
 
     // Print the data of all nodes
